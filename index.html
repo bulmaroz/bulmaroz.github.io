@@ -29,57 +29,81 @@
         <!-- Experiencia -->
         <section class="experiencia">
             <h2>Experiencia</h2>
-            <ul>
-                <li>
-                    <strong>Mayo 2017 - Julio 2019</strong> 
-                  Consultor y capacitador del sistema ERP Epicor<br>
-                Implementador y capacitador de Epicor en el área de sistemas empresariales, 
+
+            <div class="accordion">
+                <button class="accordion-btn">Mayo 2017 - Julio 2019 <i class="fas fa-chevron-down"></i></button>
+                <div class="accordion-content">
+                    <p>Consultor y capacitador del sistema ERP Epicor<br>
+                    Implementador y capacitador de Epicor en el área de sistemas empresariales, 
                     con experiencia en soporte técnico y desarrollo de soluciones personalizadas. 
-                    Especialista en consultas SQL Server, desde nivel básico hasta avanzado, orientado a la optimización y mejora de procesos
-                </li>
-                <li>
-                    <strong>Enero 2020 a Julio 2022</strong> 
-                  Migración de ERP Epicor de entornos on-premise a Epicor Cloud.<br>
-Configuración de certificados SSL y establecimiento de conexiones seguras.<br>
-Desarrollo y mantenimiento de integraciones con CRM mediante API REST.<br>
-Participación en diferentes etapas de proyectos tecnológicos para empresas manufactureras, garantizando eficiencia y continuidad operativa.<br>
-                </li>
-                <li>
-                    <strong>Julio 2022 a 2025 Presente </strong> 
-                  Desarrollo de prototipo web para gestión académica.<br>
-Implementación en Blazor con conexión a API REST.<br>
-Uso de Entity Framework para la persistencia de datos.<br>
-Creación de BPMs en Epicor Kinetic para automatización de procesos.<br>
-Diseño y ejecución de consultas avanzadas en BAQs para análisis y reportes.<br>
-Desarrollo de customizaciones en Kinetic, adaptadas a las necesidades específicas de cada empresa.<br>
-                </li>
-            </ul>
+                    Especialista en consultas SQL Server, desde nivel básico hasta avanzado, orientado a la optimización y mejora de procesos.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button class="accordion-btn">Enero 2020 a Julio 2022 <i class="fas fa-chevron-down"></i></button>
+                <div class="accordion-content">
+                    <p>Migración de ERP Epicor de entornos on-premise a Epicor Cloud.<br>
+                    Configuración de certificados SSL y establecimiento de conexiones seguras.<br>
+                    Desarrollo y mantenimiento de integraciones con CRM mediante API REST.<br>
+                    Participación en diferentes etapas de proyectos tecnológicos para empresas manufactureras, garantizando eficiencia y continuidad operativa.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button class="accordion-btn">Julio 2022 a 2025 Presente <i class="fas fa-chevron-down"></i></button>
+                <div class="accordion-content">
+                    <p>Desarrollo de prototipo web para gestión académica.<br>
+                    Implementación en Blazor con conexión a API REST.<br>
+                    Uso de Entity Framework para la persistencia de datos.<br>
+                    Creación de BPMs en Epicor Kinetic para automatización de procesos.<br>
+                    Diseño y ejecución de consultas avanzadas en BAQs para análisis y reportes.<br>
+                    Desarrollo de customizaciones en Kinetic, adaptadas a las necesidades específicas de cada empresa.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Footer -->
         <footer>
             <p>Conectemos en las redes profesionales</p>
           <div class="social-links">
-    <a href="https://github.com/bulmaroz/" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/bulmarozr/" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://www.facebook.com/bulmarozr" target="_blank" aria-label="Facebook">
-        <i class="fab fa-facebook"></i>
-    </a>
-    <a href="https://www.instagram.com/bulmarozr/" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://wa.me/528448077145" target="_blank" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+              <a href="https://github.com/bulmaroz/" target="_blank" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/bulmarozr/" target="_blank" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://www.facebook.com/bulmarozr" target="_blank" aria-label="Facebook">
+                  <i class="fab fa-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/bulmarozr/" target="_blank" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://wa.me/528448077145" target="_blank" aria-label="WhatsApp">
+                  <i class="fab fa-whatsapp"></i>
+              </a>
+          </div>
         </footer>
     </div>
+
+    <script>
+        // Script acordeón
+        const accordions = document.querySelectorAll(".accordion-btn");
+
+        accordions.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const content = btn.nextElementSibling;
+                btn.classList.toggle("active");
+
+                if (btn.classList.contains("active")) {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    btn.querySelector("i").classList.replace("fa-chevron-down", "fa-chevron-up");
+                } else {
+                    content.style.maxHeight = null;
+                    btn.querySelector("i").classList.replace("fa-chevron-up", "fa-chevron-down");
+                }
+            });
+        });
+    </script>
 </body>
-
 </html>
-
-
