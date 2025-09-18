@@ -141,3 +141,50 @@ footer p {
         font-size: 1.8rem;
     }
 }
+
+/* Acordeón */
+.accordion {
+    margin: 15px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #1a73e8;
+}
+
+.accordion-btn {
+    width: 100%;
+    background: #1a73e8;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.accordion-btn:hover {
+    background: #0d47a1;
+}
+
+.accordion-btn i {
+    transition: transform 0.3s;
+}
+
+.accordion-content {
+    background: #e3f2fd;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 15px;
+}
+
+.accordion-content p {
+    padding: 15px 0;
+    margin: 0;
+    line-height: 1.6;
+}
